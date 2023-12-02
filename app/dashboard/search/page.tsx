@@ -40,17 +40,21 @@ export default function Page() {
   const handleDraw = async ()=>{
 
     const merchantInfo = await users(user?.provider, merchant)
-    console.log(merchantInfo)
-    const result = await drawCard(user?.provider, inputValue)
-    if(result){
-      
-    alert("Finish drawing.Check your NFT Gallery!")
+    const cost = Number(merchantInfo[2])
+    if(user?.points){
+      if(cost > user?.points)
+      {
+        alert(`Drawing NFT will cost you ${cost} points, but you have ${user?.points} points`)
+      }
+      else{
+        const result = await drawCard(user?.provider, inputValue)
+        if(result){
+          
+        alert("Finish drawing.Check your NFT Gallery!")
+        }
+        else{
+          alert("Drawing Failed")}}
     }
-    else{
-      alert("Drawing Failed")
-    }
-    
-    
   }
 
   const handleTransfer = async ()=>{
