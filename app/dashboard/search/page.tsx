@@ -12,7 +12,7 @@ import { useUser } from '@/app/ui/userContext';
 import { NftGallery } from '@/app/ui/user/account';
 import { Prompt } from 'next/font/google';
 
-export default function Page({ placeholder }: { placeholder: string }) {
+export default function Page() {
 
   const [inputValue, setInputValue] = useState('');
   const [nfts, setNfts] = useState();
@@ -84,7 +84,6 @@ export default function Page({ placeholder }: { placeholder: string }) {
       </label>
       <input
         className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
-        placeholder={placeholder}
         onChange={handleChange}
         defaultValue={''}
       />
