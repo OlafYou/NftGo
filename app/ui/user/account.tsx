@@ -213,7 +213,7 @@ export function UserInfo() {
                         <strong>We detect that you have not yet registered as our user. </strong>
                         <strong> {'Please click here to '}
                             <Link href='/dashboard/user/register'>
-                                <button className="underline hover:text-blue-600" > regisiter</button>
+                                <button className="underline hover:text-blue-600" > register</button>
                             </Link>
                         </strong>
 
