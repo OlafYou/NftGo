@@ -7,20 +7,24 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { unstable_noStore as noStore } from 'next/cache';
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
-const links = [
-  { name: 'Home', href: '/dashboard', icon: HomeIcon },
-  {
-    name: 'Invoices',
-    href: '/dashboard/invoices',
-    icon: DocumentDuplicateIcon,
-  },
-  { name: 'Wallet', href: '/dashboard/wallet', icon: UserGroupIcon },
-];
+
 
 export default function NavLinks() {
+
+  noStore();
+  const links = [
+    {
+      name: 'Search',
+      href: '/dashboard/search',
+      icon: DocumentDuplicateIcon,
+    },
+    { name: 'User', href: '/dashboard/user', icon: UserGroupIcon },
+  ];
+
   const pathname = usePathname();
   return (
     <>
