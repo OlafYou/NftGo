@@ -6,11 +6,11 @@ import path from 'path';
 
 
 // 禁用 Next.js 默认的 bodyParser，因为我们将使用 formidable 来处理上传的数据
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
+// export const config = {
+//     api: {
+//         bodyParser: false,
+//     },
+// };
 
 export async function POST(request) {
 
