@@ -7,7 +7,7 @@ import { useSearchParams , usePathname, useRouter} from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 import { useState } from 'react';
 import { Button } from '@/app/ui/button';
-import { fetchMerchantNFTs, drawCard, users, walletTransfer} from '@/app/ui/user-data';
+import { fetchMerchantNFTs, drawCard, users, walletTransfer, Nft} from '@/app/ui/user-data';
 import { useUser } from '@/app/ui/userContext';
 import { NftGallery } from '@/app/ui/user/account';
 import { Prompt } from 'next/font/google';
@@ -15,7 +15,7 @@ import { Prompt } from 'next/font/google';
 export default function Page() {
 
   const [inputValue, setInputValue] = useState('');
-  const [nfts, setNfts] = useState();
+  const [nfts, setNfts] = useState<Array<Nft>|null>(null);
   const {user, setUser} = useUser();
   const [showResults, setShowResults] = useState(false)
   const [merchant, setMerchant] = useState('');
@@ -32,7 +32,7 @@ export default function Page() {
     setNfts(tempNfts)
     setShowResults(true)
 
-    if((tempNfts?.length > 0)){
+    if((tempNfts?.length)){
       setMerchant(inputValue)
     }
   }
@@ -92,7 +92,7 @@ export default function Page() {
     </div>
 
     {showResults&&
-    (nfts?.length>0&&
+    (nfts?.length&&
       <div className='mt-4'>
           <NftGallery nfts={nfts} showHead={false}/>
           {(!user?.isMerchant)&&

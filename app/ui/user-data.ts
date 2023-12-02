@@ -72,13 +72,14 @@ export async function fetchUserInfo(provider: any, account: any) {
 
     } catch (error) {
         console.log(error)
+        return null
     }
 
 }
 
 
 
-export async function fetchUserNfts(provider: any, account: any) {
+export async function fetchUserNfts(provider: any, account: any): Promise<Array<Nft>|null>{
 
 
     const contract = new ethers.Contract(CONTRACT_ADDRESS, abi, provider)
@@ -99,6 +100,7 @@ export async function fetchUserNfts(provider: any, account: any) {
         return nfts;
     } catch (error) {
         console.log(error)
+        return null
     }
 
 }
@@ -144,6 +146,13 @@ export async function createNFT(provider: any, image: any, name: any, time: any,
     }
 
 }
+
+export interface Nft {
+    image: string,
+    name: string,
+    expiryTimes: string,
+    discountPercentages: number
+  }
 
 export async function fetchMerchantNFTs(provider: any, name: any) {
 

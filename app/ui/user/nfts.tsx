@@ -10,6 +10,7 @@ import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
+import { Nft } from '../user-data';
 
 
 export function NftGallery(nfts: any){
@@ -23,7 +24,7 @@ export function NftGallery(nfts: any){
             {/* NOTE: comment in this code when you get to this point in the course */}
     
             <div className="bg-white px-6">
-              {nfts?.map((nft, i) => {
+              {nfts?.map((nft:Nft, i:number) => {
                 return (
                   <div
                     key={nft.name}

@@ -17,7 +17,7 @@ import { askMetaMask, fetchUserInfo } from './user-data';
 
 
 export interface User {
-  provider: ethers.BrowserProvider | null;
+  provider: ethers.BrowserProvider | undefined;
   accounts: Array<any>;
   points: number;
   nickname: string;
@@ -53,10 +53,20 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 
       if (metamask?.accounts.length>0) {
         const userInfo = await fetchUserInfo(metamask?.provider, metamask?.accounts[0]);
-        const tempUser: User = { ...metamask, ...userInfo };
+        // const tempUser: User = { ...metamask, ...userInfo };
+        if(userInfo){
+        const tempUser: User = {
+          provider: metamask?.provider, 
+          accounts: metamask?.accounts,
+          points: userInfo?.points,
+          nickname: userInfo?.nickname,
+          isUser: userInfo?.isUser,
+          isMerchant: userInfo?.isMerchant
+        };
         setUser(tempUser);
         console.log(tempUser)
       }
+    }
 
     }
     fetchData()

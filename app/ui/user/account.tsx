@@ -19,13 +19,14 @@ import {
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { connectMetaMask } from '../user-data';
+import { Nft } from '../user-data';
 
 export default function Profile() {
 
     const { user, setUser } = useUser();
-    const [nfts, setNfts] = useState([])
+    const [nfts, setNfts] = useState<Array<Nft> | null>([])
     const [balance, setBalance] = useState(0)
-    const [chainId, setChainId] = useState()
+    const [chainId, setChainId] = useState(0)
 
     console.log(nfts instanceof Array)
 
@@ -42,7 +43,7 @@ export default function Profile() {
             console.log(nfts)
             setNfts(nfts)
             setBalance(Number(balance) / 1e18)
-            setChainId(Number(network['chainId']))
+            setChainId(Number(network?.['chainId']))
         }
         if (user&&(user?.accounts.length>0)) { fetchData() }
 
@@ -253,7 +254,7 @@ export function NftGallery(props: any) {
                 {/* NOTE: comment in this code when you get to this point in the course */}
 
                 <div className="bg-white px-6">
-                    {nfts?.map((nft, i) => {
+                    {nfts?.map((nft:Nft, i:number) => {
                         return ((nft.image!=='')&&
                             <div
                                 key={i}

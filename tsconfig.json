@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.js",
     "scripts/seed.js"
-, "app/lib/userContext.js"  ],
+, "app/lib/userContext.js", "app/ui/registerForm.js", "app/ui/createNftsForm.js", "app/ui/createNftsForm.js"  ],
   "exclude": ["node_modules"]
 }
