@@ -8,9 +8,7 @@
 
 #### Click "click to explore" to enter the "User" interface.
 
-<img src="/Users/laihongyue/Library/Application Support/typora-user-images/image-20231202173133165.png" alt="image-20231202173133165" style="zoom: 33%;" />
-
-
+<img width="479" alt="image" src="https://github.com/OlafYou/next-learn/assets/61107923/1ce22e31-bfbe-4416-8dda-0c1b426321e4">
 
 > **If you haven't installed the MetaMask extension, the system will prompt you to install it. Please search for MetaMask and install it.**
 >
@@ -20,7 +18,7 @@
 
 #### As a first-time user, you need to register as our user
 
-<img src="/Users/laihongyue/Library/Application Support/typora-user-images/image-20231202173442977.png" alt="image-20231202173442977" style="zoom:50%;" />
+<img width="673" alt="image" src="https://github.com/OlafYou/next-learn/assets/61107923/52d94a20-94b7-4d93-be51-b00086e8157a">
 
 > - **Click "register" here, and you will be redirected to the register page**
 > - **On this page, you can enter your nickname and your identity**
@@ -36,7 +34,7 @@
 
 1. As a merchant, you can create NFTs. On the right side of the NFT Gallery in the User interface, you can see a button called "Create NFTs+". 
 
-2. <img src="/Users/laihongyue/Library/Application Support/typora-user-images/image-20231202173806527.png" alt="image-20231202173806527" style="zoom:33%;" />
+2. <img width="1130" alt="image" src="https://github.com/OlafYou/next-learn/assets/61107923/9249bc9a-8c6d-49a1-9fe9-cfe3d0b694db">
 
 3. After clicking it, you can enter the NFT creation interface. You need to enter the name, discount, validity period (in seconds), and image of the NFT you want to create (**it is not recommended to exceed 500KB**, otherwise bugs may occur). 
 
@@ -52,13 +50,15 @@
 
 As a consumer, you can extract NFTs. Enter the Search interface, enter the nickname of the merchant, and you can get the NFTs available for extraction by the merchant.
 
-<img src="/Users/laihongyue/Library/Application Support/typora-user-images/image-20231202174148515.png" alt="image-20231202174148515" style="zoom:50%;" />
+<img width="1122" alt="image" src="https://github.com/OlafYou/next-learn/assets/61107923/b03a3c4a-3ef7-4c08-9f15-3b4e68782385">
+
 
 > **For test, We provide a merchant named 'Merchant'.**
 >
 > You can enter 'Merchant' to see details like this:
 >
-> <img src="/Users/laihongyue/Library/Application Support/typora-user-images/image-20231202174657214.png" alt="image-20231202174657214" style="zoom:50%;" />
+> <img width="1109" alt="image" src="https://github.com/OlafYou/next-learn/assets/61107923/3ae25d91-ebca-4be5-a092-62b215f5ef9e">
+
 
  Click "Draw NFT" below to extract. After the extraction is completed, you can go back to the NFT Gallery in the User interface to see if you have successfully extracted the NFT (new NFTs may take some time to update and display, please be patient and refresh the page).
 
